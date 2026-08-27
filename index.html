@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support en hulp voor Maeve & Felix – Leren • Ontdekken • Spelen.">
+  <meta name="theme-color" content="#fff8ef">
+  <title>Maeve & Felix — Support</title>
+  <style>
+    :root {
+      --bg: #fff8ef;
+      --surface: rgba(255,255,255,.86);
+      --text: #24303b;
+      --muted: #66717c;
+      --accent: #ee8b3a;
+      --accent-dark: #ce6818;
+      --line: rgba(36,48,59,.10);
+      --shadow: 0 16px 50px rgba(52, 42, 28, .10);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(255, 205, 138, .34), transparent 36%),
+        radial-gradient(circle at 94% 16%, rgba(144, 205, 231, .26), transparent 30%),
+        var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    .wrap { width: min(960px, calc(100% - 36px)); margin: 0 auto; }
+
+    header { padding: 30px 0 10px; }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand { display: flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.02em; }
+    .mark {
+      width: 42px; height: 42px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(145deg, #ffad62, #ec7d29);
+      color: white; font-weight: 900; box-shadow: 0 8px 20px rgba(238,139,58,.28);
+    }
+    .nav-link { color: var(--muted); text-decoration: none; font-weight: 650; }
+    .nav-link:hover { color: var(--text); }
+
+    .hero { padding: 72px 0 46px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 7px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.72); border: 1px solid var(--line);
+      color: var(--muted); font-size: 14px; font-weight: 700;
+    }
+    h1 { margin: 20px auto 14px; max-width: 720px; font-size: clamp(42px, 8vw, 72px); line-height: .98; letter-spacing: -.055em; }
+    .sub { margin: 0 auto; max-width: 650px; font-size: clamp(18px, 3vw, 22px); color: var(--muted); }
+    .tagline { font-weight: 760; color: var(--text); }
+    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+      min-height: 48px; padding: 0 19px; border-radius: 15px;
+      text-decoration: none; font-weight: 760; border: 1px solid var(--line);
+      background: rgba(255,255,255,.72);
+    }
+    .button.primary { color: #fff; background: var(--accent); border-color: var(--accent); box-shadow: 0 10px 28px rgba(238,139,58,.26); }
+    .button.primary:hover { background: var(--accent-dark); }
+
+    main { padding-bottom: 70px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      padding: 26px; border-radius: var(--radius);
+      background: var(--surface); border: 1px solid rgba(255,255,255,.72);
+      box-shadow: var(--shadow); backdrop-filter: blur(14px);
+    }
+    .card.wide { grid-column: 1 / -1; }
+    .icon { font-size: 25px; }
+    h2 { margin: 9px 0 10px; font-size: 24px; letter-spacing: -.03em; }
+    h3 { margin: 22px 0 5px; font-size: 17px; }
+    p { margin: 0 0 10px; }
+    .muted { color: var(--muted); }
+    .faq { border-top: 1px solid var(--line); margin-top: 18px; }
+    details { padding: 17px 0; border-bottom: 1px solid var(--line); }
+    summary { cursor: pointer; font-weight: 760; }
+    details p { margin: 10px 0 0; color: var(--muted); }
+
+    .contact {
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+      padding: 28px; border-radius: var(--radius);
+      background: #26323d; color: white;
+      box-shadow: var(--shadow); margin-top: 18px;
+    }
+    .contact h2 { margin-top: 0; }
+    .contact p { color: rgba(255,255,255,.72); max-width: 580px; }
+    .contact .button { flex: 0 0 auto; background: #fff; color: #26323d; border-color: #fff; }
+
+    footer { padding: 28px 0 40px; color: var(--muted); font-size: 14px; text-align: center; }
+
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+      .card.wide { grid-column: auto; }
+      .hero { padding-top: 54px; }
+      .contact { align-items: flex-start; flex-direction: column; }
+      .contact .button { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav aria-label="Hoofdnavigatie">
+        <div class="brand"><span class="mark" aria-hidden="true">M&F</span><span>Maeve & Felix</span></div>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Support • versie 1.0</span>
+      <h1>Hoe kunnen we helpen?</h1>
+      <p class="sub"><span class="tagline">Maeve & Felix — Leren • Ontdekken • Spelen</span><br>Hulp en informatie voor ouders en verzorgers.</p>
+      <div class="actions">
+        <a class="button primary" href="mailto:denn.h@live.nl?subject=Support%20Maeve%20%26%20Felix">✉️ Neem contact op</a>
+        <a class="button" href="#faq">Bekijk veelgestelde vragen</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <div class="grid">
+      <section class="card">
+        <div class="icon" aria-hidden="true">🧭</div>
+        <h2>Over de app</h2>
+        <p>Maeve & Felix is een educatieve app waarin kinderen spelenderwijs oefenen met onder andere taal, rekenen, topografie, ruimte en tijd.</p>
+        <p class="muted">De oefeningen combineren kijken, luisteren, slepen, aanwijzen en schrijven met een kindvriendelijke voortgang.</p>
+      </section>
+
+      <section class="card">
+        <div class="icon" aria-hidden="true">🛠️</div>
+        <h2>Probleem oplossen</h2>
+        <p>Werkt iets niet zoals verwacht? Sluit de app volledig af en open hem opnieuw. Controleer ook of het geluid van het apparaat aan staat wanneer spraak niet hoorbaar is.</p>
+        <p class="muted">Vermeld bij contact bij voorkeur wat je deed, wat je verwachtte en wat er daadwerkelijk gebeurde.</p>
+      </section>
+
+      <section class="card wide" id="faq">
+        <div class="icon" aria-hidden="true">💬</div>
+        <h2>Veelgestelde vragen</h2>
+        <div class="faq">
+          <details>
+            <summary>Ik hoor geen gesproken instructies. Wat kan ik doen?</summary>
+            <p>Controleer het volume en de geluidsinstellingen van het apparaat. Sluit daarna de app volledig af en start hem opnieuw.</p>
+          </details>
+          <details>
+            <summary>Kan de voortgang of moeilijkheid worden aangepast?</summary>
+            <p>Instellingen voor oefeningen en voortgang kunnen vanuit de ouderomgeving van de app worden aangepast.</p>
+          </details>
+          <details>
+            <summary>Waarom is een bonusspel niet beschikbaar?</summary>
+            <p>Bonusspellen kunnen munten kosten. Controleer het muntensaldo en de instellingen in de ouderomgeving.</p>
+          </details>
+          <details>
+            <summary>Een oefening lijkt vast te lopen of reageert niet.</summary>
+            <p>Ga terug naar het menu en open de oefening opnieuw. Helpt dat niet, sluit de app volledig af. Blijft het probleem bestaan, stuur dan een korte omschrijving via de contactknop hieronder.</p>
+          </details>
+          <details>
+            <summary>Waar kan ik een fout of suggestie melden?</summary>
+            <p>Gebruik de contactknop op deze pagina. Geef indien mogelijk aan op welk apparaat en in welk onderdeel van de app het gebeurde.</p>
+          </details>
+        </div>
+      </section>
+    </div>
+
+    <section class="contact" id="contact">
+      <div>
+        <h2>Kom je er niet uit?</h2>
+        <p>Stuur een e-mail met je vraag, foutmelding of suggestie. Vermeld bij een technisch probleem bij voorkeur het onderdeel van de app en wat er precies gebeurde.</p>
+      </div>
+      <a class="button" href="mailto:denn.h@live.nl?subject=Support%20Maeve%20%26%20Felix">denn.h@live.nl</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Maeve & Felix · Support voor versie 1.0</div>
+  </footer>
+</body>
+</html>
